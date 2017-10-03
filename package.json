@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node example.js",
     "lint": "eslint src/**/*",
-    "test": "xo"
+    "test": "node test.js"
   },
   "bin": {
     "purrge": "cli.js"
