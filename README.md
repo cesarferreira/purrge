@@ -1,6 +1,6 @@
 <p align="center"><a href="https://github.com/cesarferreira/purrge" target="_blank"><img width="200"src="extras/logo.ico"></a></p>
 <h1 align="center">purrge</h1>
-<p align="center">Quickly uninstall android apps</p>
+<p align="center">Quickly purrge android apps from your phone</p>
 <p align="center">
   <a href="https://travis-ci.org/cesarferreira/purrge"><img src="https://travis-ci.org/cesarferreira/purrge.svg?branch=master" alt="Build Status"></a>
   <a href="https://www.npmjs.com/package/purrge"><img src="https://img.shields.io/npm/dt/purrge.svg" alt="npm"></a>
