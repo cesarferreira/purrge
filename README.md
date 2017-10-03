@@ -12,22 +12,14 @@
 ## Install
 
 ```sh
-yarn add purrge
+npm install -g purrge
 ```
 
 ## Usage
 
 ```
 Usage
-
-   $ purrge <command> <params>
-
-   $ purrge sample <param>             # Uses the <PARAM>
-   
- Examples
-
-   $ purrge sample TEST                # Uses the TEST
-   $ purrge sample YOLO                # Uses the YOLO
+   $ purrge
 ```
 
 ## Created by
