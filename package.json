@@ -1,0 +1,42 @@
+{
+  "name": "purrge",
+  "version": "0.0.0",
+  "description": "Quickly uninstall android apps",
+  "author": {
+    "name": "Cesar Ferreira",
+    "email": "cesar.manuel.ferreira@gmail.com",
+    "url": "http://cesarferreira.com"
+  },
+  "scripts": {
+    "start": "node example.js",
+    "lint": "eslint src/**/*",
+    "test": "xo"
+  },
+  "bin": {
+    "purrge": "cli.js"
+  },
+  "main": "cli.js",
+  "keywords": [],
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "fuzzy": "^0.1.3",
+    "inquirer-autocomplete-prompt": "^0.11.1",
+    "lodash": "^4.17.4",
+    "meow": "^3.7.0",
+    "shelljs": "^0.7.8",
+    "update-notifier": "^2.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "xo": "^0.18.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cesarferreira/purrge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cesarferreira/purrge/issues"
+  },
+  "homepage": "https://github.com/cesarferreira/purrge#readme",
+  "license": "MIT"
+}
