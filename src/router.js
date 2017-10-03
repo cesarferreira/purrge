@@ -17,7 +17,6 @@ function getPackages() {
 	const command = shell.exec('adb shell pm list packages', { silent: true })
 	const packages = command.stdout.split(`\n`)
 		.map(item => item.replace(`package:`, ``));
-
 		return packages;
 }
 
@@ -32,7 +31,7 @@ function searchPackages(answers, input) {
 const self = module.exports = {
 	init: (input, flags) => {
 		
-		packages = getPackages();
+		packages = getPackages().filter(Boolean);
 
 		inquirer.registerPrompt('autocomplete', require('inquirer-autocomplete-prompt'));
 		inquirer.prompt([{
@@ -47,10 +46,9 @@ const self = module.exports = {
 			name: 'shouldUninstall',
 			message: 'Are you sure you want to UNINSTALL this package?',
 			source: function(params) {
-				return new Promise(function (resolve) { resolve('yes', 'no') })
+				return new Promise(function (resolve) { resolve(['yes', 'no']) })
 			}
 		}]).then(function (answers) {
-			//etc
 			log(answers)
 		});
 	}
