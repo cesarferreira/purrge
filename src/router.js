@@ -8,13 +8,14 @@ const shell = require('shelljs');
 const inquirer = require('inquirer');
 const fuzzy = require('fuzzy');
 
-const SampleTask = require('./tasks/sample_task');
-
 let packages;
 
 function getPackages() {
 	const command = shell.exec('adb shell pm list packages', { silent: true })
-	const packages = command.stdout.split(`\n`).filter(Boolean)
+	const packages = command.stdout.split(`\n`)
+		.filter(Boolean)
+		.filter(item => item.indexOf('daemon not running') === -1)
+		.filter(item => item.indexOf('daemon started') === -1)
 		.map(item => item.replace(`package:`, ``));
 		return packages;
 }
@@ -36,6 +37,11 @@ const self = module.exports = {
 	init: (input, flags) => {
 		
 		packages = getPackages();
+
+		if (packages.length === 0) {
+			Utils.titleError(`No packages found, are you sure you have a phone connected?`);
+			process.exit(2);
+		}
 
 		inquirer.registerPrompt('autocomplete', require('inquirer-autocomplete-prompt'));
 		inquirer.prompt({

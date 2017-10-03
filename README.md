@@ -19,6 +19,7 @@ npm install -g purrge
 ```
 
 ## Usage
+Connect your android phone or emulator to your computer and run:
 
 ```
 Usage

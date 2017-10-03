@@ -18,6 +18,9 @@ const self = module.exports = {
 	title: (text) => {
 		log(Chalk.blue('==>') + Chalk.bold(` ${text}`));
 	},
+	titleError: (text) => {
+		log(Chalk.red('==>') + Chalk.bold(` ${text}`));
+	},
 	saveToFile: (content, filePath) => {
 		fs.writeFileSync(filePath, content, 'utf-8');
 	},
