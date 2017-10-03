@@ -15,6 +15,9 @@ const self = module.exports = {
 	isEmpty: obj => {
 		return Object.keys(obj).length === 0;
 	},
+	title: (text) => {
+		log(Chalk.blue('==>') + Chalk.bold(` ${text}`));
+	},
 	saveToFile: (content, filePath) => {
 		fs.writeFileSync(filePath, content, 'utf-8');
 	},
