@@ -31,3 +31,7 @@ Usage
 
 ## License
 MIT © [Cesar Ferreira](http://cesarferreira.com)
+
+
+## Logo
+by <a href="http://www.iconka.com">iconka</a>
