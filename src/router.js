@@ -43,7 +43,7 @@ const self = module.exports = {
 		packages = getPackages();
 
 		if (packages.length === 0) {
-			Utils.titleError(`No packages found, are you sure you have a phone connected?`);
+			Utils.titleError(`None or more than one device/emulator connected`);
 			process.exit(2);
 		}
 
