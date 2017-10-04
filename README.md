@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="extras/ss.png" width="100%" />
+  <img src="extras/screenshot.png" width="100%" />
 </p>
 
 <p align="center">
