@@ -12,6 +12,10 @@
   <img src="extras/ss.png" width="100%" />
 </p>
 
+<p align="center">
+  <img src="extras/actions.png" width="100%" />
+</p>
+
 ## Install
 
 ```sh
@@ -25,6 +29,14 @@ Connect your android phone or emulator to your computer and run:
 Usage
    $ purrge
 ```
+
+Choose between **Uninstall** and **Clear App Data**
+
+<p align="center">
+  <img src="extras/actions.png" width="100%" />
+</p>
+
+Happy purrging!
 
 ## Created by
 [Cesar Ferreira](https://cesarferreira.com)

@@ -16,6 +16,7 @@ const self = module.exports = {
 		return Object.keys(obj).length === 0;
 	},
 	title: (text) => {
+		log(``);
 		log(Chalk.blue('==>') + Chalk.bold(` ${text}`));
 	},
 	titleError: (text) => {

@@ -32,6 +32,10 @@ function uninstall(chosenPackage) {
 	shell.exec(`adb uninstall ${chosenPackage}`);
 }
 
+function clearData(chosenPackage) {
+	shell.exec(`adb shell pm clear ${chosenPackage}`);
+}
+
 // Main code //
 const self = module.exports = {
 	init: (input, flags) => {
@@ -47,23 +51,25 @@ const self = module.exports = {
 		inquirer.prompt({
 			type: 'autocomplete',
 			name: 'package',
-			pageSize: 7,
-			message: 'What package do you want to uninstall?',
+			pageSize: 10,
+			message: 'What package do you want to purrge?',
 			source: searchPackages
 		}).then(packageAnswer =>{
 			inquirer.prompt({
 				type: 'list',
-				name: 'shouldUninstall',
-				message: 'Are you sure you want to UNINSTALL this package?',
-				choices: ['Yes', 'No']
-			}).then(shouldUninstallAnswer => {
+				name: 'packageAction',
+				message: 'What do you want to do with this app?',
+				choices: ['Uninstall', 'Clear Data', 'Cancel']
+			}).then(packageActionAnswer => {
 				const chosenPackage = packageAnswer.package;
-				const shouldUninstall = shouldUninstallAnswer.shouldUninstall.toLowerCase();
+				const packageAction = packageActionAnswer.packageAction.toLowerCase();
 
-				if (shouldUninstall === 'yes') {
-					log(``);
+				if (packageAction === 'uninstall') {
 					Utils.title(`Uninstalling: ${Chalk.green(chosenPackage)}...`)
 					uninstall(chosenPackage);
+				} else if (packageAction === 'clear data') {
+					Utils.title(`Clearing data: ${Chalk.green(chosenPackage)}...`)
+					clearData(chosenPackage);
 				}
 			});
 		});
