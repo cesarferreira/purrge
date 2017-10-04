@@ -1,4 +1,4 @@
-<p align="center"><a href="https://github.com/cesarferreira/purrge" target="_blank"><img width="200"src="extras/logo.ico"></a></p>
+<p align="center"><a href="https://github.com/cesarferreira/purrge" target="_blank"><img width="200"src="extras/walk.gif"></a></p>
 <h1 align="center">purrge</h1>
 <p align="center">Quickly <i>purrge</i> android apps from your phone</p>
 <p align="center">
