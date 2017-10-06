@@ -16,7 +16,8 @@ function getPackages() {
 		.filter(Boolean)
 		.filter(item => item.indexOf('daemon not running') === -1)
 		.filter(item => item.indexOf('daemon started') === -1)
-		.map(item => item.replace(`package:`, ``));
+		.map(item => item.replace(`package:`, ``))
+		.map(item => item.replace(/^\s+|\s+$/g, ""));
 		return packages;
 }
 
