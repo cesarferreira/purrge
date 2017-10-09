@@ -11,6 +11,9 @@ updateNotifier({ pkg }).notify();
 const cli = meow(`
 Usage
    $ purrge
+Options
+      -d, --clear-data  Clear Data
+      -u, --uninstall	Uninstall app
 `,
   {
     alias: {
