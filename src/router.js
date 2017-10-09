@@ -56,23 +56,35 @@ const self = module.exports = {
 			message: 'What package do you want to purrge?',
 			source: searchPackages
 		}).then(packageAnswer =>{
-			inquirer.prompt({
-				type: 'list',
-				name: 'packageAction',
-				message: 'What do you want to do with this app?',
-				choices: ['Uninstall', 'Clear Data', 'Cancel']
-			}).then(packageActionAnswer => {
-				const chosenPackage = packageAnswer.package;
-				const packageAction = packageActionAnswer.packageAction.toLowerCase();
+			const chosenPackage = packageAnswer.package;
+			if(flags["clearData"] || flags["d"])
+			{
+				Utils.title(`Clearing data: ${Chalk.green(chosenPackage)}...`)
+				clearData(chosenPackage);
+			} else if(flags["uninstall"] || flags["u"])
+			{
+				Utils.title(`Uninstalling: ${Chalk.green(chosenPackage)}...`)
+				uninstall(chosenPackage);
+			} else
+			{
+				inquirer.prompt({
+					type: 'list',
+					name: 'packageAction',
+					message: 'What do you want to do with this app?',
+					choices: ['Uninstall', 'Clear Data', 'Cancel']
+				}).then(packageActionAnswer => {
+					const chosenPackage = packageAnswer.package;
+					const packageAction = packageActionAnswer.packageAction.toLowerCase();
 
-				if (packageAction === 'uninstall') {
-					Utils.title(`Uninstalling: ${Chalk.green(chosenPackage)}...`)
-					uninstall(chosenPackage);
-				} else if (packageAction === 'clear data') {
-					Utils.title(`Clearing data: ${Chalk.green(chosenPackage)}...`)
-					clearData(chosenPackage);
-				}
-			});
+					if (packageAction === 'uninstall') {
+						Utils.title(`Uninstalling: ${Chalk.green(chosenPackage)}...`)
+						uninstall(chosenPackage);
+					} else if (packageAction === 'clear data') {
+						Utils.title(`Clearing data: ${Chalk.green(chosenPackage)}...`)
+						clearData(chosenPackage);
+					}
+				});
+			}
 		});
 	}
 };
