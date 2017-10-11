@@ -105,7 +105,9 @@ const self = module.exports = {
             process.exit(2);
         }else if (devices.length === 1){
             //only single device is connected proceed with package selection
-            showPackageSelection(devices[0]);
+            let selectedDevice = devices[0].substr(0,devices[0].indexOf(' '));
+
+            showPackageSelection(selectedDevice);
         }else{
             //multiple device connected show device selection
             showDeviceSelection();
