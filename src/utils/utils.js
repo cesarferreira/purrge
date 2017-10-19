@@ -28,7 +28,7 @@ const self = module.exports = {
   saveToFile: (content, filePath) => {
     fs.writeFileSync(filePath, content, 'utf-8');
   },
-  readFile: (content, filePath) => {
-    fs.readFileSync(filePath, 'utf-8');
+  readFile: (filePath) => {
+    return fs.readFileSync(filePath, 'utf-8');
   }
 };
