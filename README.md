@@ -9,11 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="extras/screenshot.png" width="100%" />
-</p>
-
-<p align="center">
-  <img src="extras/actions.png" width="100%" />
+  <img src="extras/anim.gif" width="100%" />
 </p>
 
 ## Install
@@ -30,13 +26,11 @@ Usage
    $ purrge
 ```
 
-Choose between **Uninstall** and **Clear App Data**
-
-<p align="center">
-  <img src="extras/actions.png" width="100%" />
-</p>
-
-Happy purrging!
+Choose between:
+- **Open**
+- **Uninstall** 
+- **Clear App Data**
+- **Download APK**
 
 ## Created by
 [Cesar Ferreira](https://cesarferreira.com)
