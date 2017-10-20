@@ -6,7 +6,7 @@ const Chalk = require('chalk');
 const Utils = require('./utils/utils');
 const log = console.log;
 const inquirer = require('inquirer');
-const adb = require('node-adb-api');
+const adb = require('../node-adb-api');
 
 const CHOOSE_WHAT_TO_DO_OPTIONS = [
   'Open', 
