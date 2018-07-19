@@ -1,0 +1,30 @@
+{
+    "title": "purrge",
+    "subtitle": "🐱 Quickly purrge android apps from your phone",
+    "installation": "npm i -g purrge",
+    "url": "https://github.com/cesarferreira/purrge",
+    "screenshot": "https://raw.githubusercontent.com/cesarferreira/purrge/master/extras/anim.gif",
+    "author": {
+        "name": "cesar ferreira",
+        "thumbnail": "https://pbs.twimg.com/profile_images/884351017097322496/2mmpORsM_400x400.jpg",
+        "homepage": "http://cesarferreira.com"
+    },
+    "highlights": [
+        {
+            "title": "Choose between:",
+            "items": [
+                "Open",
+                "Uninstall",
+                "Clear App Data",
+                "Download APK"
+            ]
+        },
+        {
+            "title": "Links",
+            "items": [
+                "GitHub: <a href='https://github.com/cesarferreira/purrge'>https://github.com/cesarferreira/purrge</a>",
+                "npm: <a href='https://www.npmjs.com/package/purrge'>https://www.npmjs.com/package/purrge</a>"
+            ]
+        }
+    ]
+}
